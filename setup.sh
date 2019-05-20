@@ -19,10 +19,11 @@ fi
 
 # ensure authorized_keys exists
 if [ -f $FILE ]; then
-    BACKUP="$FILE.$today.backup"
+#    BACKUP="$FILE.$today.backup"
 
-    echo "Backing up existing $FILE to $BACKUP"
-    cp $FILE $BACKUP
+#    echo "Backing up existing $FILE to $BACKUP"
+    echo $FILE
+#    cp $FILE $BACKUP
 else
     echo "Creating $FILE"
     touch $FILE
@@ -39,6 +40,7 @@ do
   else
     echo "Copying key"
     echo "$i" >> $FILE
+    echo $FILE
   fi
 done
 
